@@ -2,7 +2,7 @@
 //  SettingController.swift
 //  Tip Calculator
 //
-//  Created by Pavani Vellal on 3/13/17.
+//  Created by Pavani Vellal on 8/13/17.
 //  Copyright © 2017 Pavani Vellal. All rights reserved.
 //
 
