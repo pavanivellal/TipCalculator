@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Tip Calculator
 //
-//  Created by Pavani Vellal on 3/12/17.
+//  Created by Pavani Vellal on 8/12/17.
 //  Copyright © 2017 Pavani Vellal. All rights reserved.
 //
 
@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalVal: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var one_person_total: UILabel!
+    @IBOutlet weak var two_person_total: UILabel!
+    @IBOutlet weak var three_person_total: UILabel!
+    @IBOutlet weak var four_person_total: UILabel!
     
     var tipPercentages = [18.00,20.00,25.00]
     let defaults = UserDefaults.standard
@@ -37,8 +41,10 @@ class ViewController: UIViewController {
         tipVal.text = "$0.00"
         totalVal.text = "$0.00"
         tipControl.selectedSegmentIndex = 0
-        
-        
+        one_person_total.text   = "$0.00"
+        two_person_total.text   = "$0.00"
+        three_person_total.text = "$0.00"
+        four_person_total.text  = "$0.00"
     }
     
 
@@ -53,7 +59,11 @@ class ViewController: UIViewController {
         let bill = Double(billField.text!) ?? 0
         let tip = bill * (tipPercentages[tipControl.selectedSegmentIndex] * 0.01)
         let total = bill + tip
-        
+        one_person_total.text   = String.init(format: "$%0.2f", total)
+        two_person_total.text   = String.init(format: "$%0.2f", (total/2))
+        three_person_total.text = String.init(format: "$%0.2f", (total/3))
+        four_person_total.text  = String.init(format: "$%0.2f", (total/4))
+    
         tipVal.text = String.init(format: "$%0.2f", tip)
         totalVal.text = String.init(format: "$%0.2f", total)
         

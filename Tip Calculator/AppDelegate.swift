@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Tip Calculator
 //
-//  Created by Sheshagiri Haniyur on 3/12/17.
+//  Created by Sheshagiri Haniyur on 8/12/17.
 //  Copyright © 2017 Pavani Vellal. All rights reserved.
 //
 
